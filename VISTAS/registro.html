@@ -1,0 +1,113 @@
+<html>
+    <!DOCTYPE html>
+    <head> 
+        <meta charset="UTF-8">
+        <link rel=stylesheet href="../estilos.css">
+        <title>Registrarse triapet</title>
+        <link rel="shortcut icon" href="https://w7.pngwing.com/pngs/412/142/png-transparent-white-heart-and-footprint-illustration-dog-cat-paw-decal-sticker-love-paws-animals-heart-pet-thumbnail.png"/>
+    </head>
+    <body>
+        <div class="contenido">
+            <form method="post" action="../CONTROLADORES/registro.php" >
+            <h1 class="formulario__titulo">Registrate</h1>
+            <h4 class="pa1" style="font-weight: normal">Elige tu rol</h4>
+            <select id="Opciones" name="rl" class="sel" onchange="seleccion()">
+                <option  autofocus required value="Usuario"></option>
+                <option  value="Administrador">Administrador</option>
+                <option  value="Doctor">Doctor</option>
+                </select>
+                
+                <input type="text" name="nombre" class="formulario__input" required>
+                <label for="" class="formulario__label1" >Nombre Completo</label>
+                <h4 class="pa" style="font-weight: normal">Tipo de Documento</h4>
+                <select name="td" class="sel" required>
+                <option  autofocus required>...</option>
+                <option  value="Tarjeta de identidad">Tarjeta de identidad</option>
+                <option  value="Cedula de Ciudadania">Cedula de Ciudadania</option>
+                <option  value="Cedula de extranjeria">Cedula de extranjeria</option>
+                </select>
+                <input type="number" name="nd" class="formulario__input" required>
+                <label for="" class="formulario__label1">Numero de documento</label>
+                <input type="text" class="formulario__input" name="usu" required>
+                <label for="" class="formulario__label1">Digite su usuario</label>
+                <input type="password" class="formulario__input" name="contra" required>
+                <label for="" class="formulario__label1">Ingrese su contraseña:</label>
+                <input type="text" class="formulario__input" name="dire" required>
+                <label for="" class="formulario__label1">Dirección</label>
+                <input type="number" class="formulario__input" name="tel">
+                <label for="" class="formulario__label1">Digite su telefono (opcional)</label>
+                <input type="email" class="formulario__input" name="ce" required>
+                <label for="" class="formulario__label1">Correo Electronico</label>
+                <input type="date" class="formulario__input"name="fn" required>
+                <label for="" class="formulario__label1"  >Fecha de Nacimiento</label>
+                <input type="number" class="formulario__input" name="nc" required>
+                <label for="" class="formulario__label1">Numero de contacto</label>
+                <h4 class="pa2" style="font-weight: normal" >Genero      </h4>
+                <select name="g"  class="sel" required>
+                <option  autofocus>...</option>
+                <option value="f">Femenino</option>
+                <option value="m">Masculino</option>
+                </select>
+                <script src="funcionesjs.js">
+                </script>
+            
+                <div id="Administrador" style="display: none;">
+                        <label for="" class="formulario__label2">Titulo universitario</label>
+                        <input type="text" class="formulario__input" name="tituloa">
+                  </div>
+                  <div id="Doctor" style="display: none;">
+                            <label for="" class="formulario__label2">Titulo universitario</label>
+                            <input type="text" name="titulod" class="formulario__input">
+                            <h4 class="pa" style="font-weight: normal" >¿Tiene experiencia?</h4>
+                            <select name="experiencia"  class="sel" required>
+                                <option  autofocus>...</option>
+                                <option name="ae" value="si">si</option>
+                                <option name="ae" value="no">no</option>
+                                </select>
+                     
+                  </div>
+                  <input type="submit" class="formulario__submit1" value="Registrate" >
+                </form>
+            </div>
+                <script lang="javascript" type="text/javascript">
+                    var Opcion=document.getElementById("Opciones")
+                    let admin=document.getElementById("Administrador")
+                    let doc=document.getElementById("Doctor")
+            
+                    function seleccion()
+                    {
+                        //para mostrar un mensaje de alerta
+                        alert(Opcion.value)
+                        switch (Opcion.value) {
+                            case "Administrador":
+                                //para llamar a la variable
+                                if (doc.style.display="block")
+                                {
+                                    doc.style.display="none"
+                                    admin.style.display="block";
+                                }
+                                break;
+                            case "Doctor":
+                                if(admin.style.display="block")
+                                {
+                                    admin.style.display="none"
+                                    doc.style.display="block"
+            
+                                }
+                                break;
+                            case "...":
+                            if((doc.style.display="block") || (admin.style.display="block"))
+                                {
+                                    doc.style.display="none"
+                                    admin.style.display="none"
+                                }
+                            break;
+                            default:
+                                break;
+                            }
+                    }
+                </script>
+
+        
+    </body>
+</html>

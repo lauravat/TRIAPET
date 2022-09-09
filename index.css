@@ -1,0 +1,224 @@
+body{
+    background: #3ea9db;
+}
+header{
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #3ea9db;
+    background-size: cover;
+    height: 240px;
+    overflow: hidden;
+}
+.contenedor{
+    width: 95%;
+    margin: auto;
+}
+.contenedor .menu{
+    color:black;
+    font-size: 25px;
+    float: right;
+
+}
+.texto h1{
+    font-weight: 400px;
+    font-size: 80px;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(255, 255, 255);
+
+
+}
+/*menu hamburguesa*/
+#menu{
+    display: none;
+}
+.contenedor-menu
+{ 
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    flex: 1;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+#menu:checked ~ .contenedor-menu /*para que se muestre el menu cuando se seleccione el icono*/
+{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu
+{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100%;
+    position: relative; /*el icono de cerrar se quede donde esta*/
+
+}
+.cont-menu nav a
+{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover
+{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+.carousel-inner img {
+    width: 100%;
+    max-height: 745px;
+}
+
+.carousel-inner{
+ height: 745px;
+ 
+}
+.texto{
+    padding-top: 4%;
+    font-size: 30px;
+    font-family: fantasy;
+    text-align: center;
+}
+.texto2{
+    padding-top: 2%;
+    font-size: 30px;
+    font-family: cursive;
+    text-align: center;
+    color: rgb(23, 125, 156);
+}
+
+footer{
+    width: 100%;
+    background: #332f2f;
+    color: white;   
+    
+}
+
+.contenedorfooter{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.contenedorbody{
+    display: flex;
+    justify-content: space-between;
+}
+
+.columna1{
+    max-width: 400px;
+}
+
+.columna1 h1{
+    font-size: 22px;
+}
+
+.columna1 p{
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.columna2{
+    max-width: 500px;
+    
+}
+
+.columna2 h1{
+    font-size: 22px;
+}
+
+.fila{
+    margin-top: 20px;
+    display: flex;
+}
+
+.fila img{
+    width: 36px;
+    height: 36px;
+}
+
+.fila label{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+}
+
+.columna3{
+    max-width: 400px;
+}
+
+.columna3 h1{
+    font-size: 22px;
+}
+
+.fila2{
+    margin-top: 20px;
+    display: flex;
+}
+
+.fila2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.fila2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+}
+
+.contenedorfooter2{
+    width: 100%;  
+    background: #131212;
+}
+
+.contenedorfooter3{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.adicional{
+    color: #C7C7C7;
+}
+
+.adicional a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.informacion a{
+    text-decoration: none;
+    color: #C7C7C7;
+}
+.textslider{
+    color: rgb(6, 22, 114);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+.textospagina{
+    text-align: center;
+    font-style: italic;
+}
